@@ -45,7 +45,7 @@
   balloon.addEventListener('click', () => {
     size += 10;
     colorIdx = (colorIdx + 1) % colors.length;
-    if (size > 420) { size = 200; colorIdx = 0; } // explode & reset
+    if (size > 420) { size = 200; colorIdx = 0; }
     render();
   });
 
