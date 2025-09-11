@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Change background (jQuery)</title>
+</head>
+<body>
+  <button id="btn">Click me!</button>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>
+    function randomColor(){
+      const r = Math.floor(Math.random()*256);
+      const g = Math.floor(Math.random()*256);
+      const b = Math.floor(Math.random()*256);
+      return `rgb(${r},${g},${b})`;
+    }
+    function applyRandom(){
+      const c = randomColor();
+      console.log(c);
+      $('body').css('background', c);
+      return c;
+    }
+    $(function(){
+      applyRandom();
+      $('#btn').on('click', applyRandom);
+    });
+  </script>
+</body>
+</html>
