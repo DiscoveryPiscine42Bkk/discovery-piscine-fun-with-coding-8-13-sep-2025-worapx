@@ -1,0 +1,89 @@
+/* Reset */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+}
+
+.parallax {
+  background-image: url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=1600&auto=format&fit=crop');
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+.parallax::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+.parallax .overlay {
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+.parallax h1 {
+  font-size: clamp(32px, 6vw, 72px);
+  margin: 0;
+}
+.parallax p {
+  opacity: 0.85;
+  font-size: clamp(16px, 3vw, 22px);
+}
+
+.txt {
+  min-height: 80vh;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 10vw;
+}
+.txt h2 {
+  font-size: clamp(24px, 4vw, 48px);
+  margin-bottom: 16px;
+}
+.txt p {
+  font-size: clamp(14px, 2.4vw, 20px);
+  max-width: 60ch;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+.parallax2 {
+  background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1600&auto=format&fit=crop');
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+.parallax2::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+.parallax2 .overlay {
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+.parallax2 h1 {
+  font-size: clamp(32px, 6vw, 72px);
+  margin: 0;
+}
+.parallax2 p {
+  opacity: 0.85;
+  font-size: clamp(16px, 3vw, 22px);
+}
