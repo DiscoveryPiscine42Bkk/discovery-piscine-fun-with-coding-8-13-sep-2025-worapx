@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Basic Calculator</title>
+</head>
+<body>
+  <input type="text" id="left" placeholder="Left number">
+
+  <select id="operator">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+    <option value="%">%</option>
+  </select>
+
+  <input type="text" id="right" placeholder="Right number">
+
+  <input type="submit" value="Try me!" onclick="calculate()">
+
+  <script>
+    function calculate() {
+      const left = document.getElementById("left").value;
+      const right = document.getElementById("right").value;
+      const op = document.getElementById("operator").value;
+
+      const l = parseInt(left, 10);
+      const r = parseInt(right, 10);
+
+      if (isNaN(l) || isNaN(r) || l < 0 || r < 0) {
+        alert("Error :(");
+        return;
+      }
+
+      if ((op === "/" || op === "%") && r === 0) {
+        alert("It’s over 9000!");
+        console.log("It’s over 9000!");
+        return;
+      }
+
+      let result;
+      switch (op) {
+        case "+": result = l + r; break;
+        case "-": result = l - r; break;
+        case "*": result = l * r; break;
+        case "/": result = l / r; break;
+        case "%": result = l % r; break;
+      }
+
+      alert("Result: " + result);
+      console.log("Result:", result);
+    }
+
+    setInterval(() => {
+      alert("Please, use me...");
+    }, 30000);
+  </script>
+</body>
+</html>
