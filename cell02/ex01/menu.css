@@ -1,0 +1,63 @@
+/* reset เบา ๆ */
+body {margin:0; font-family:'Poppins', sans-serif; background:#ffeef5; }
+
+.navbar {
+  background:#fff;
+  box-shadow:0 4px 12px rgba(0,0,0,0.08);
+  padding:0 20px;
+}
+
+.menu {
+  list-style:none;
+  margin:0; padding:0;
+  display:flex; align-items:center; gap:20px;
+}
+
+/* link หลัก */
+.menu > li > a {
+  display:block;
+  padding:14px 10px;
+  color:#333;
+  text-decoration:none;
+  font-weight:600;
+  transition:.3s;
+  border-radius:6px;
+}
+.menu > li > a:hover {
+  background:#ff69b4;
+  color:#fff;
+}
+
+/* dropdown */
+.dropdown {
+  position:relative;
+}
+.submenu {
+  list-style:none;
+  margin:0; padding:6px 0;
+  position:absolute; top:100%; left:0;
+  background:#fff;
+  box-shadow:0 8px 18px rgba(0,0,0,.1);
+  border-radius:10px;
+  min-width:160px;
+  opacity:0; pointer-events:none;
+  transform:translateY(8px);
+  transition:.25s ease;
+}
+.dropdown:hover .submenu {
+  opacity:1; pointer-events:auto;
+  transform:translateY(0);
+}
+.submenu li a {
+  display:block;
+  padding:10px 14px;
+  color:#333;
+  text-decoration:none;
+  font-size:14px;
+  transition:.2s;
+  border-radius:6px;
+}
+.submenu li a:hover {
+  background:#ff69b4;
+  color:#fff;
+}
